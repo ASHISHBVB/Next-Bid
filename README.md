@@ -20,12 +20,10 @@ Traditional auction platforms often lack user-friendly interfaces, real-time upd
 ---
 
 ## **Contributor**
-1. @Manikant
-2. @Jayesh
-3. @Tohit
-4. @Pradeep
-5. @Ashish
-
+1. @Jayesh
+2. @Tohit
+3. @Manikant
+4. @Ashish
 ---
 
 ## **Use Cases**
