@@ -91,7 +91,7 @@ Follow these steps to set up the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Auction-app.git
+   git clone https://github.com/yourusername/Next-Bid.git
    cd frontend && cd Backend
    ```
 1. Install dependencies:
