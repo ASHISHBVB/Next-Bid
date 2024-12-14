@@ -100,7 +100,7 @@ const AuctionItem = () => {
               <header className="bg-neutral-500 py-4 text-[24px] font-semibold px-4">
                 BIDS
               </header>
-              <div className="bg-white px-4 min-h-fit lg:min-h-[650px]">
+              <div className="bg-white px-4 min-h-fit lg:min-h-[540px]">
                 {auctionBidders &&
                 new Date(auctionDetail.startTime) < Date.now() &&
                 new Date(auctionDetail.endTime) > Date.now() ? (

@@ -91,7 +91,7 @@ const ViewAuctionDetails = () => {
               <header className="bg-stone-200 py-4 text-[24px] font-semibold px-4">
                 BIDS
               </header>
-              <div className="bg-white px-4 min-h-fit lg:min-h-[650px]">
+              <div className="bg-white px-4 min-h-fit lg:min-h-[180px]">
                 {auctionBidders &&
                 auctionBidders.length > 0 &&
                 new Date(auctionDetail.startTime) < Date.now() &&
