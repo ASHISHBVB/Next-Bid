@@ -136,17 +136,27 @@ const ViewAuctionDetails = () => {
                     );
                   })
                 ) : Date.now() < new Date(auctionDetail.startTime) ? (
-                  <img
-                    src="/notStarted.png"
-                    alt="not-started"
-                    className="w-full max-h-[650px]"
-                  />
+                  <div className="video-container">
+      <video
+        src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/actioner-doing-bids-for-selling-painting-animation-download-in-lottie-json-gif-static-svg-file-formats--picture-auction-piece-of-art-sells-people-pack-animations-6861860.mp4"
+        autoPlay
+        loop
+        muted
+        className="w-full h-full object-cover"
+      />
+      <p className="text-center text-lg font-medium mt-2">Get Ready To Start Bid</p>
+    </div>
                 ) : (
-                  <img
-                    src="/auctionEnded.png"
-                    alt="ended"
-                    className="w-full max-h-[650px]"
+                  <div className="video-container">
+                  <video
+                    src="https://cdnl.iconscout.com/lottie/premium/thumb/auction-animation-download-in-lottie-json-gif-static-svg-file-formats--bidding-hammer-judge-miscellaneous-pack-animations-6873515.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    className="w-full h-full object-cover"
                   />
+                  <p className="text-center text-lg font-medium mt-2">Bid Is Over</p>
+                </div>
                 )}
               </div>
             </div>
