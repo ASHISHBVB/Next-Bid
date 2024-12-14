@@ -4,6 +4,7 @@ import { getMyAuctionItems } from "@/store/slices/auctionSlice";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import Spline from '@splinetool/react-spline';
 
 const ViewMyAuctions = () => {
   const { myAuctions, loading } = useSelector((state) => state.auction);
@@ -21,7 +22,13 @@ const ViewMyAuctions = () => {
 
   return (
     <>
-      <div className="w-full ml-0 m-0 h-fit px-5 pt-20 lg:pl-[80px] flex flex-col">
+    <div className="w-full h-full min-h-screen overflow-hidden relative mt-16">
+          {/* Spline background */}
+          <Spline
+            className="absolute top-0 left-0 w-full h-full"
+            scene="https://prod.spline.design/wsx58pM3VzFXVb3k/scene.splinecode"
+          />
+      <div className="relative  w-full ml-0 m-0 h-fit px-5 lg:pl-[80px] flex flex-col overflow-hidden mt-16">
         <h1
           className={`text-[#d6482b] text-2xl font-bold mb-2 min-[480px]:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl`}
         >
@@ -57,6 +64,7 @@ const ViewMyAuctions = () => {
             :
           </div>
         )}
+      </div>
       </div>
     </>
   );

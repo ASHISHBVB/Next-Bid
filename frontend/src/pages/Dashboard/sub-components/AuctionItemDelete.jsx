@@ -14,7 +14,7 @@ const AuctionItemDelete = () => {
   return (
     <>
       <div className="overflow-x-auto mb-10">
-        <table className="min-w-full bg-white border-gray-300">
+        <table className="min-w-full border-gray-300">
           <thead className="bg-gray-800 text-white">
             <tr>
               <th className="py-2 px-4 text-left">Image</th>

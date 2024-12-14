@@ -2,6 +2,7 @@ import { postCommissionProof } from "@/store/slices/commissionSlice";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Spline from '@splinetool/react-spline';
 
 const SubmitCommission = () => {
   const [proof, setProof] = useState("");
@@ -23,18 +24,23 @@ const SubmitCommission = () => {
     formData.append("amount", amount);
     formData.append("comment", comment);
     dispatch(postCommissionProof(formData));
+    
   };
 
   return (
     <>
-      <section className="w-full h-fit px-36 pt-20 lg:pl-[140px] flex flex-col min-h-screen py-4 justify-start bg-black text-white">
+    <Spline 
+        className="absolute top-16 left-0 w-full h-full z-0"
+        scene="https://prod.spline.design/Fn9datsI68iBKA5B/scene.splinecode"
+      />
+      <section className="w-full h-fit px-36 pt-20 lg:pl-[140px] flex flex-col min-h-screen py-4 justify-start relative text-white">
         <motion.div
-          className="bg-[#1a1a1a] mx-auto w-full h-auto px-6 flex flex-col gap-6 items-center py-8 justify-center rounded-md shadow-lg"
+          className=" mx-auto w-full h-auto px-6 flex flex-col gap-6 items-center py-8 justify-center rounded-md shadow-lg"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-[#d6482b] text-3xl font-bold mb-4">Submit Commission</h1>
+          <h1 className="text-white text-3xl font-bold mb-4" style={{ textShadow: '0 0 40px white, 0 0 60px white, 0 0 80px white' }}>Submit Commission</h1>
           <form
             className="flex flex-col gap-6 w-full"
             onSubmit={handlePaymentProof}

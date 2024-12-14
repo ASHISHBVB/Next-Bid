@@ -17,7 +17,6 @@ module.exports = {
       },
     },
     extend: {
-      
       colors: {
         primary: "#D6482B",
         border: "hsl(var(--border))",
@@ -76,15 +75,26 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        glow: {
+          '0%': {
+            boxShadow: '0 0 5px rgba(255, 0, 0, 0.6), 0 0 10px rgba(255, 0, 0, 0.4), 0 0 15px rgba(255, 0, 0, 0.2)',
+          },
+          '50%': {
+            boxShadow: '0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4)',
+          },
+          '100%': {
+            boxShadow: '0 0 5px rgba(255, 0, 0, 0.6), 0 0 10px rgba(255, 0, 0, 0.4), 0 0 15px rgba(255, 0, 0, 0.2)',
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         fadeIn: 'fadeIn 1s ease-out forwards',
         slideInFromLeft: 'slideInFromLeft 1s ease-out forwards',
+        glow: 'glow 1.5s infinite ease-in-out',
       },
     },
   },
-  
   plugins: [require("tailwindcss-animate")],
 }

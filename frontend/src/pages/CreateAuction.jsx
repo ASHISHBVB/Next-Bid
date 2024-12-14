@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import Spline from '@splinetool/react-spline';
 
 const CreateAuction = () => {
   const [image, setImage] = useState("");
@@ -65,14 +66,14 @@ const CreateAuction = () => {
   }, [isAuthenticated]);
 
   return (
-    <article className="w-full h-fit px-36 pt-20 lg:pl-[140px] flex flex-col min-h-screen py-4 justify-start bg-black text-white">
-      
-      <div className="bg-[#1a1a1a] mx-auto w-full h-auto px-6 flex flex-col gap-6 items-center py-8 justify-center rounded-md shadow-lg">
-      <h1
-        className={`text-[#d6482b] text-3xl font-bold mb-4`}
-      >
-        Create Auction
-      </h1>
+    <section className="w-full h-fit px-36 pt-20 lg:pl-[140px] flex flex-col min-h-screen py-4 justify-start relative text-white">
+       <Spline 
+        className="absolute top-16 left-0 w-full h-full "
+        scene="https://prod.spline.design/Fn9datsI68iBKA5B/scene.splinecode"
+      />
+      <div className=" mx-auto w-full h-auto px-6 flex flex-col gap-6 items-center py-8 justify-center relative rounded-md shadow-lg">
+      <h1 className="text-white text-3xl font-bold mb-4" style={{ textShadow: '0 0 40px white, 0 0 60px white, 0 0 80px white' }}>Create Auction</h1>
+     
         <form
           className="flex flex-col gap-6 w-full"
           onSubmit={handleCreateAuction}
@@ -217,7 +218,7 @@ const CreateAuction = () => {
           <button className="bg-[#D6482B] font-semibold hover:bg-[#b8381e] text-xl transition-all duration-300 py-2 px-4 rounded-md text-white w-[280px] mx-auto lg:w-[640px] my-4">{loading ? "Creating Auction..." : "Create Auction"}</button>
         </form>
       </div>
-    </article>
+    </section>
   );
 };
 

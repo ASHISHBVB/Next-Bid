@@ -39,19 +39,19 @@ const AuctionItem = () => {
         <div className="text-[16px] flex flex-wrap gap-2 items-center">
           <Link
             to="/"
-            className="font-semibold transition-all text-neutral-400 duration-300 hover:text-[#D6482B]"
+            className="font-semibold transition-all text-neutral-800 duration-300 hover:text-[#D6482B]"
           >
             Home
           </Link>
-          <FaGreaterThan className="text-neutral-400" />
+          <FaGreaterThan className="text-neutral-800" />
           <Link
             to={"/auctions"}
-            className="font-semibold transition-all text-neutral-400 duration-300 hover:text-[#D6482B]"
+            className="font-semibold transition-all text-neutral-800 duration-300 hover:text-[#D6482B]"
           >
             Auctions
           </Link>
-          <FaGreaterThan className="text-neutral-400" />
-          <p className="text-neutral-400">{auctionDetail.title}</p>
+          <FaGreaterThan className="text-neutral-800" />
+          <p className="text-neutral-800">{auctionDetail.title}</p>
         </div>
         {loading ? (
           <Spinner />
@@ -66,16 +66,16 @@ const AuctionItem = () => {
                   />
                 </div>
                 <div className="flex flex-col justify-around pb-4">
-                  <h3 className="text-gray-300 text-xl font-semibold mb-2 min-[480px]:text-xl md:text-2xl lg:text-3xl">
+                  <h3 className="text-gray-700 text-xl font-semibold mb-2 min-[480px]:text-xl md:text-2xl lg:text-3xl">
                     {auctionDetail.title}
                   </h3>
-                  <p className="text-xl font-semibold text-gray-300">
+                  <p className="text-xl font-semibold text-gray-700">
                     Condition:{" "}
                     <span className="text-[#D6482B]">
                       {auctionDetail.condition}
                     </span>
                   </p>
-                  <p className="text-xl font-semibold text-gray-300">
+                  <p className="text-xl font-semibold text-gray-700">
                     Minimum Bid:{" "}
                     <span className="text-[#D6482B]">
                       Rs.{auctionDetail.startingBid}
@@ -90,7 +90,7 @@ const AuctionItem = () => {
               {auctionDetail.description &&
                 auctionDetail.description.split(". ").map((element, index) => {
                   return (
-                    <li key={index} className="text-[18px] my-2 text-orange-300">
+                    <li key={index} className="text-[18px] my-2 text-cyan-800">
                       {element}
                     </li>
                   );

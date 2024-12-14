@@ -55,11 +55,10 @@ const CardTwo = ({ imgSrc, title, startingBid, startTime, endTime, id }) => {
 
   return (
     <>
-      <div className="basis-full bg-white rounded-md group sm:basis-56 lg:basis-60 2xl:basis-80">
+      <div className="basis-full mt-8 bg-white rounded-md group sm:basis-56 lg:basis-60 2xl:basis-80">
         <img
           src={imgSrc}
           alt={title}
-          className="w-full aspect-[4/3] m-auto md:p-12"
         />
         <div className="px-2 pt-4 pb-2">
           <h5 className="font-semibold text-[18px] group-hover:text-[#d6482b] mb-2">

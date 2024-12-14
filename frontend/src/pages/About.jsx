@@ -35,7 +35,7 @@ const About = () => {
         {/* Spline background */}
         <Spline
             className="fixed inset-0 -z-10"
-            scene="https://prod.spline.design/8hsbscADnHzjKVZK/scene.splinecode"
+            scene="https://prod.spline.design/wsx58pM3VzFXVb3k/scene.splinecode"
           />
         <div>
           <h1

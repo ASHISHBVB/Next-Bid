@@ -1,4 +1,6 @@
 import Spinner from "@/custom-components/Spinner";
+import Spline from '@splinetool/react-spline';
+
 import {
   clearAllSuperAdminSliceErrors,
   getAllPaymentProofs,
@@ -33,11 +35,15 @@ const Dashboard = () => {
 
   return (
     <>
+     <div className="relative w-full h-full">
+     <div className="absolute top-0 left-0 w-full h-full -z-10">
+          <Spline scene="https://prod.spline.design/QM2OTOZG2kERY3aS/scene.splinecode" />
+        </div>
       {loading ? (
         <Spinner />
       ) : (
-        <>
-          <div className="w-full ml-0 m-0 h-fit px-5 pt-20 lg:pl-[80px] flex flex-col gap-10">
+      
+          <div className="w-full ml-0 m-0 h-fit px-5 pt-20 lg:pl-[80px] flex flex-col relative gap-10">
             <h1
               className={`text-[#d6482b] text-2xl font-bold mb-2 min-[480px]:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl`}
             >
@@ -70,8 +76,9 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-        </>
+      
       )}
+      </div>
     </>
   );
 };

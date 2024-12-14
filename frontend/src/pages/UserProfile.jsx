@@ -15,15 +15,15 @@ const UserProfile = () => {
 
   return (
     <>
-      <section className="relative w-full ml-0 m-0 h-fit px-48 pt-20 lg:pl-[160px] flex flex-col min-h-screen py-4 justify-start opacity-0 animate-fadeIn">
+      <section className="relative w-full ml-0 m-0 h-full min-h-screen px-80 pt-20 lg:pl-[160px] flex flex-col  py-4 justify-start opacity-0 animate-fadeIn">
       <div className="absolute top-0 left-0 w-full h-full">
-      <Spline scene="https://prod.spline.design/QM2OTOZG2kERY3aS/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/Fn9datsI68iBKA5B/scene.splinecode" />
     </div>
         {loading ? (
           <Spinner />
         ) : (
           <>
-            <div className="relative mx-auto w-full h-auto px-36 flex flex-col gap-6 items-center py-4 justify-center rounded-md">
+            <div className="bg-gray-800 relative mx-auto w-full h-auto px-36 ml-16 flex flex-col gap-6 items-center py-4 justify-center rounded-md">
               <img
                 src={user.profileImage?.url}
                 alt="/imageHolder.jpg"
@@ -31,7 +31,7 @@ const UserProfile = () => {
               />
 
               <div className="mb-6 w-full">
-                <h3 className="text-xl font-semibold mb-4 text-white">Personal Details</h3>
+                <h3 className="text-xl font-semibold mb-4 text-[#f5f5f5]">Personal Details</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div>
                     <label className="custom-label">Username</label>

@@ -31,7 +31,7 @@ const PaymentProofs = () => {
   return (
     <>
       <div className="overflow-x-auto">
-        <table className="min-w-full bg-white mt-5">
+        <table className="min-w-full mt-5">
           <thead className="bg-gray-800 text-white">
             <tr>
               <th className="w-1/3 py-2">User ID</th>
@@ -93,15 +93,13 @@ export const Drawer = ({ setOpenDrawer, openDrawer }) => {
   return (
     <>
       <section
-        className={`fixed ${
+        className={`hidden ${
           openDrawer && singlePaymentProof.userId ? "bottom-0" : "-bottom-full"
-        }  left-0 w-full transition-all duration-300 h-full bg-[#00000087] flex items-end`}
+        }  left-0 w-full transition-all duration-300 h-full  flex items-end`}
       >
-        <div className="bg-white h-fit transition-all duration-300 w-full">
+        <div className=" h-fit transition-all duration-300 w-full">
           <div className="w-full px-5 py-8 sm:max-w-[640px] sm:m-auto">
-            <h3 className="text-[#D6482B]  text-3xl font-semibold text-center mb-1">
-              Update Payment Proof
-            </h3>
+          <h1 className="text-red-700 text-3xl text-center font-bold mb-4" style={{ textShadow: '0 0 40px red, 0 0 60px red, 0 0 80px red' }}> Update Payment Proof</h1>
             <p className="text-stone-600">
               You can update payment status and amount.
             </p>

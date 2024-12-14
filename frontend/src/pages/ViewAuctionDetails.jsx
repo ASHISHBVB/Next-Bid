@@ -34,15 +34,15 @@ const ViewAuctionDetails = () => {
           >
             Home
           </Link>
-          <FaGreaterThan className="text-stone-400" />
+          <FaGreaterThan className="text-stone-600" />
           <Link
             to={"/view-my-auctions"}
             className="font-semibold transition-all duration-300 hover:text-[#D6482B]"
           >
             My Auctions
           </Link>
-          <FaGreaterThan className="text-stone-400" />
-          <p className="text-stone-600">{auctionDetail.title}</p>
+          <FaGreaterThan className="text-stone-600" />
+          <p className="text-stone-800">{auctionDetail.title}</p>
         </div>
         {loading ? (
           <Spinner />
@@ -50,13 +50,13 @@ const ViewAuctionDetails = () => {
           <div className="flex gap-4 flex-col 2xl:flex-row">
             <div className="flex-1 flex flex-col gap-3">
               <div className="flex gap-4 flex-col lg:flex-row">
-                <div className="bg-white w-[100%] lg:w-40 lg:h-40 flex justify-center items-center p-5">
+                <div className="w-[100%] lg:w-48 lg:h-48 flex justify-center items-center mt-16">
                   <img
                     src={auctionDetail.image?.url}
                     alt={auctionDetail.title}
                   />
                 </div>
-                <div className="flex flex-col justify-around pb-4">
+                <div className="flex flex-col justify-around pb-4 ">
                   <h3 className="text-[#111] text-xl font-semibold mb-2 min-[480px]:text-xl md:text-2xl lg:text-3xl">
                     {auctionDetail.title}
                   </h3>
@@ -74,7 +74,7 @@ const ViewAuctionDetails = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-xl w-fit font-bold">
+              <p className="text-xl w-fit font-bold mt-16">
                 Auction Item Description
               </p>
               <hr className="my-2 border-t-[1px] border-t-stone-700" />

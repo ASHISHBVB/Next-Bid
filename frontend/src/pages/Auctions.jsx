@@ -15,7 +15,7 @@ const Auctions = () => {
           {/* Spline background */}
           <Spline
             className="absolute top-0 left-0 w-full h-full"
-            scene="https://prod.spline.design/8hsbscADnHzjKVZK/scene.splinecode"
+            scene="https://prod.spline.design/Bz9VJkKQ2tWLWpoC/scene.splinecode"
           />
 
           {/* Foreground content */}

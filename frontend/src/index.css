@@ -81,7 +81,7 @@
   .custom-label {
     color: #f32c2c;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 0.25rem;
   }
 
@@ -89,8 +89,8 @@
     width: 100%;
     padding: 0.75rem;
     margin-top: 0.5rem;
-    color: rgb(28, 195, 48);
-    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
     transition: all 0.3s ease;
   }
 
