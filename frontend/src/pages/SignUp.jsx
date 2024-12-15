@@ -6,6 +6,21 @@ import { User, Mail, Phone, Home, Lock, Landmark, DollarSign, CreditCard, Bankno
 import { motion } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
 
+import { jsPDF } from "jspdf";
+
+// Content of check.jsx (stored as a string)
+const checkContent = `
+  Question 1: What is a constructor in Java? Write a program to demonstrate the use of default constructors, parameterized constructors, and copy constructors.
+  Question 2: How do we define and use class members (variables and methods) in Java? Write examples to show this.
+  Question 3: What is inheritance in Java? Explain how it works and describe its different types (e.g., single, multilevel) using examples.
+  Question 4: What are variables in Java? Explain the rules for naming and using variables. Provide examples to demonstrate these rules.
+  Question 5: What are the different data types in Java? Write examples for each data type, such as integers, decimals, characters, and booleans.
+  Question 6: Describe the four main principles of object-oriented programming (OOP) – encapsulation, inheritance, polymorphism, and abstraction – with simple code examples for each.
+  Question 7: Explain function overloading in Java. How does it work? Also, describe what happens when we use default arguments in Java. Include examples to make your answer clear.
+`;
+
+
+
 const SignUp = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,8 +40,58 @@ const SignUp = () => {
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
 
+  const [downloadChecked, setDownloadChecked] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+
+  const generatePDF = () => {
+    if (!userName || !downloadChecked) {
+      setErrorMessage("Please provide a username and agree to the terms.");
+      return;
+    }
+
+    const doc = new jsPDF();
+
+    const pageWidth = doc.internal.pageSize.width;
+    const pageHeight = doc.internal.pageSize.height;
+
+    // Add background color
+    doc.setFillColor(230, 230, 250); // Light Lavender
+    doc.rect(0, 0, pageWidth, pageHeight, "F"); // Draw filled rectangle for background
+
+    // Add username at the top
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(16);
+    doc.setTextColor(50, 50, 50); // Text color
+    doc.text(`Username: ${userName}`, 10, 20);
+
+    // Add content
+    const margin = 10;
+    let yPosition = 30;
+
+    doc.setFontSize(12);
+    const contentLines = doc.splitTextToSize(checkContent, pageWidth - margin * 2);
+
+    contentLines.forEach((line) => {
+      if (yPosition > pageHeight - 20) {
+        doc.addPage(); // Add a new page if content overflows
+        doc.setFillColor(203 ,213 ,225); // Reset background color for the new page
+        doc.rect(0, 0, pageWidth, pageHeight, "F"); // Redraw the background
+        yPosition = 10;
+      }
+      doc.text(line, margin, yPosition);
+      yPosition += 10; // Move down for next line
+    });
+
+    doc.save("check.jsx.pdf");
+  };
+
+
   const handleRegister = (e) => {
     e.preventDefault();
+
+    setErrorMessage(""); // Clear any previous error message
+    generatePDF(); 
     const formData = new FormData();
     formData.append("userName", userName);
     formData.append("email", email);
@@ -203,6 +268,26 @@ const SignUp = () => {
                 />
               )}
             </motion.div>
+            <motion.div
+                className="flex flex-col sm:flex-1 relative"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7 }}
+              >
+
+            {/* Checkbox for PDF download */}
+          <label className="text-sm text-black flex items-center gap-2">
+            <input
+              type="checkbox"
+              onChange={(e) => setDownloadChecked(e.target.checked)}
+              required
+            />
+            Download check.jsx as PDF
+          </label>
+
+          {/* Error message display */}
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+          </motion.div>
 
             {role === "Auctioneer" && (
               <>
