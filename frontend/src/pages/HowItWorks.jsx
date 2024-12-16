@@ -71,7 +71,7 @@ const HowItWorks = () => {
                   {element.icon}
                 </div>
                 <h3
-                  className={`text-[#D6482B] text-xl font-semibold mb-2 min-[480px]:text-xl md:text-2xl lg:text-3xl`}
+                  className={`text-blue-700 text-xl font-semibold mb-2 min-[480px]:text-xl md:text-2xl lg:text-3xl`}
                 >
                   {element.title}
                 </h3>
