@@ -19,9 +19,9 @@ const Leaderboard = () => {
         <Spinner />
       ) : (
         <>
-          <h1 className="text-[#D6482B] text-4xl font-bold mb-5 md:text-5xl ">
+          <h1 className="text-blue-600 text-4xl font-bold mb-5 md:text-5xl ">
             Bidders Leaderboard
-          </h1>
+          </h1>Dashboard
           <div className="overflow-x-auto w-full rounded-full">
             <table className="min-w-full border shadow-lg ">
               <thead>

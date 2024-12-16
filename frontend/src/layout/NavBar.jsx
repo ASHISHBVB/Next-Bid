@@ -23,8 +23,8 @@ const SideDrawer = () => {
   
       <nav className="bg-neutral-800 p-4 fixed top-0 left-0 w-full z-10 ">
         <div className="flex justify-between items-center text-gray-300">
-          <Link to={"/"} className="text-3xl font-semibold text-red-400">
-            Next<span className="text-red-600">Bid</span>
+          <Link to={"/"} className="text-blue-500 font-semibold text-2xl">
+            Next<span className="text-blue-300">Bid</span>
           </Link>
           
           <div className="lg:flex items-center space-x-6 hidden ">
@@ -69,8 +69,8 @@ const SideDrawer = () => {
             <div className="flex items-center gap-4">
               {!isAuthenticated ? (
                 <>
-                  <Link to={"/sign-up"} className="bg-[#D6482B] text-white text-lg py-1 px-4 rounded-full">Sign Up</Link>
-                  <Link to={"/login"} className="text-[#D6482B] bg-white border-[#DECCBE] border-2 text-lg py-1 px-4 rounded-full">Login</Link>
+                  <Link to={"/sign-up"} className="bg-blue-600 text-white text-lg py-1 px-4 rounded-full ">Sign Up</Link>
+                  <Link to={"/login"} className="text-white bg-blue-400 text-lg py-1 px-4 rounded-full">Login</Link>
                 </>
               ) : (
                 <button onClick={handleLogout} className="bg-[#D6482B] font-semibold text-white text-lg py-1 px-4 rounded-md">Logout</button>
