@@ -8,15 +8,40 @@ import Spline from '@splinetool/react-spline';
 
 import { jsPDF } from "jspdf";
 
-// Content of check.jsx (stored as a string)
 const checkContent = `
-  Question 1: What is a constructor in Java? Write a program to demonstrate the use of default constructors, parameterized constructors, and copy constructors.
-  Question 2: How do we define and use class members (variables and methods) in Java? Write examples to show this.
-  Question 3: What is inheritance in Java? Explain how it works and describe its different types (e.g., single, multilevel) using examples.
-  Question 4: What are variables in Java? Explain the rules for naming and using variables. Provide examples to demonstrate these rules.
-  Question 5: What are the different data types in Java? Write examples for each data type, such as integers, decimals, characters, and booleans.
-  Question 6: Describe the four main principles of object-oriented programming (OOP) – encapsulation, inheritance, polymorphism, and abstraction – with simple code examples for each.
-  Question 7: Explain function overloading in Java. How does it work? Also, describe what happens when we use default arguments in Java. Include examples to make your answer clear.
+Terms and Conditions for Bidder and Auctioneer
+
+1. **Eligibility**: 
+   - Only individuals above 18 years of age can participate in auctions as a bidder or auctioneer.
+   - By signing up, users confirm compliance with all applicable laws and regulations.
+
+2. **Auctioneer Responsibilities**:
+   - Ensure accurate descriptions of items.
+   - Set fair starting prices and minimum bid increments.
+   - Resolve disputes in good faith and provide necessary support to bidders.
+   - Auctioneers must pay a 5% commission to the platform after receiving payment from the bidder.
+
+3. **Bidder Responsibilities**:
+   - Bidders must place genuine bids and honor winning bids.
+   - Payment must be made within the specified time frame after winning an auction.
+   - Defaulting on payments may lead to account suspension or penalties.
+
+4. **Platform Usage**:
+   - The platform serves as a mediator for auctions. It is not responsible for any disputes, fraud, or damages.
+   - Users must not engage in malicious activities such as bidding fraud or item misrepresentation.
+
+5. **Confidentiality**:
+   - Personal information shared on the platform is protected under the platform's Privacy Policy.
+   - Auction details must not be shared or disclosed without consent.
+
+6. **Liabilities**:
+   - The platform is not liable for any financial losses, damages, or breaches resulting from user interactions.
+
+7. **Acceptance**:
+   - By signing up, you agree to abide by these terms and conditions.
+   - Violations may result in suspension or termination of accounts.
+   
+Please read and understand these terms carefully before proceeding.
 `;
 
 
@@ -39,6 +64,7 @@ const SignUp = () => {
   const { loading, isAuthenticated } = useSelector((state) => state.user);
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
+  
 
   const [downloadChecked, setDownloadChecked] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -83,7 +109,7 @@ const SignUp = () => {
       yPosition += 10; // Move down for next line
     });
 
-    doc.save("check.jsx.pdf");
+    doc.save("TermsAndConditions.pdf");
   };
 
 
@@ -282,7 +308,7 @@ const SignUp = () => {
               onChange={(e) => setDownloadChecked(e.target.checked)}
               required
             />
-            Download check.jsx as PDF
+            Terms & Conditions
           </label>
 
           {/* Error message display */}
