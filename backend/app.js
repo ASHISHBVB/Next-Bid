@@ -13,16 +13,16 @@ import superAdminRouter from "./router/superAdminRoutes.js";
 import { endedAuctionCron } from "./automation/endedAuctionCron.js";
 import { verifyCommissionCron } from "./automation/verifyCommissionCron.js";
 import { AppConfig } from "./config/env.config.js";
-
 const app = express();
 
 app.use(
   cors({
-    origin: AppConfig.CORS_ORIGIN, 
+    origin: true, 
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 
 app.use(cookieParser());
 app.use(express.json());
