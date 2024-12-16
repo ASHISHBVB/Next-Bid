@@ -30,7 +30,7 @@ const ViewMyAuctions = () => {
           />
       <div className="relative  w-full ml-0 m-0 h-fit px-5 lg:pl-[80px] flex flex-col overflow-hidden mt-16">
         <h1
-          className={`text-[#d6482b] text-2xl font-bold mb-2 min-[480px]:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl`}
+          className={`text-blue-700 text-2xl font-bold mb-2 min-[480px]:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl`}
         >
           My Auctions
         </h1>

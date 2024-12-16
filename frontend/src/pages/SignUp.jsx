@@ -57,7 +57,7 @@ const SignUp = () => {
   const [bankAccountNumber, setBankAccountNumber] = useState("");
   const [bankName, setBankName] = useState("");
   const [easypaisaAccountNumber, setEasypaisaAccountNumber] = useState("");
-  const [paypalEmail, setPaypalEmail] = useState("");
+  const [paypalEmail, setPaypalEmail] = useState(""); 
   const [profileImage, setProfileImage] = useState("");
   const [profileImagePreview, setProfileImagePreview] = useState("");
 
