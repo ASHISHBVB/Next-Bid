@@ -34,7 +34,7 @@ const Home = () => {
     transition={{ duration: 0.8 }}
   >
     <h1
-      className="text-[#d6482b] text-2xl font-bold mb-2 min-[480px]:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl drop-shadow-lg mt-16"
+      className="text-blue-500 text-2xl font-bold mb-2 min-[480px]:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl drop-shadow-lg mt-16"
     >
       WinThrough ClearBid
     </h1>

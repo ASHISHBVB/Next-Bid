@@ -56,7 +56,7 @@ const HowItWorks = () => {
             className="fixed inset-0 -z-10"
             scene="https://prod.spline.design/wsx58pM3VzFXVb3k/scene.splinecode"
           /> <h1
-          className={`text-[#d6482b] text-2xl font-bold mb-2 min-[480px]:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl`}
+          className={`text-blue-500 text-2xl font-bold mb-2 min-[480px]:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl`}
         >
           Discover How NextBid Operates
         </h1>
