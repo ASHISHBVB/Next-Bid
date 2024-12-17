@@ -1,4 +1,4 @@
-import { config } from "dotenv";
+// import { config } from "dotenv";
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -12,7 +12,7 @@ import commissionRouter from "./router/commissionRouter.js";
 import superAdminRouter from "./router/superAdminRoutes.js";
 import { endedAuctionCron } from "./automation/endedAuctionCron.js";
 import { verifyCommissionCron } from "./automation/verifyCommissionCron.js";
-import { AppConfig } from "./config/env.config.js";
+// import { AppConfig } from "./config/env.config.js";
 const app = express();
 
 app.use(
@@ -22,7 +22,6 @@ app.use(
     credentials: true,
   })
 );
-
 
 app.use(cookieParser());
 app.use(express.json());
