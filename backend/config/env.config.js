@@ -14,7 +14,6 @@ export const AppConfig = {
     CORS_ORIGIN: process.env.CORS_ORIGIN,
 
     JWT_SECRET_KEY: process.env.JWT_SECRET_KEY,
-    RESET_TOKEN_SECRET: process.env.RESET_TOKEN_SECRET,
     COOKIE_EXPIRE: process.env.COOKIE_EXPIRE ? parseInt(process.env.COOKIE_EXPIRE) : 30,
 
     CLOUDINARY: {
